@@ -19,6 +19,7 @@
 17. Overlay Effect Bg image
 18. Whatsapp style
 19. Video add
+20. scrolling bar
 
 ================================== */
 
@@ -130,7 +131,7 @@ p {
     line-height: 1.75em;
     font-weight: 400;
     font-family: 'Crimson Text', serif;
-    color: #777;
+    /* color: #f20f0f; */
 }
 a,
 a:hover {
@@ -284,7 +285,7 @@ button {
     z-index: 10;
 }
 /* text field */
-button,
+/* button,
 input,
 optgroup,
 select,
@@ -355,9 +356,9 @@ input[type="checkbox"] {
 [type=submit]:not(:disabled),
 button:not(:disabled) {
     outline: none;
-}
+} */
 /* table */
-table,
+/* table,
 th,
 tr,
 td {
@@ -367,7 +368,7 @@ th,
 tr,
 td {
     padding: 10px;
-}
+} */
 
 
 /* ======= Preloader style ======= */
@@ -386,7 +387,7 @@ td {
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: #000;
+    background-color: #000000;
     z-index: 999999;
 }
 #loader .loading,
@@ -558,10 +559,10 @@ td {
         padding: 4px 15px;
     }
     .nav-scroll {
-        /*
+        
         padding-left: 15px;
         padding-right: 15px;
-*/
+
     }
     .nav-scroll .navbar-collapse .nav-link {
         color: #fff !important;
@@ -1140,7 +1141,7 @@ td {
 }
 
 /* ======= Pricing styles ======= */
-.price-box {
+/* .price-box {
     position: relative;
     width: 100%;
     padding: 0;
@@ -1231,11 +1232,11 @@ td {
     color: #fff;
     font-style: italic;
     line-height: 35px
-}
+} */
 
 
 /* ======= Blog style ======= */
-.blog .cover {
+/* .blog .cover {
     position: relative;
     width: 100%;
     padding: 0;
@@ -1340,9 +1341,9 @@ td {
   padding-left: 2px;
   -webkit-transition: all .4s;
   transition: all .4s;
-}
+} */
 /* Blog Page */
-.blog-page .item {
+/* .blog-page .item {
     -webkit-box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05);
     box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05);
     margin-bottom: 30px;
@@ -1402,9 +1403,9 @@ td {
 }
 .blog-page .post-cont .info a:last-of-type {
     float: right;
-}
+} */
 /* Blog Sidebar */
-.blog-sidebar .widget {
+/* .blog-sidebar .widget {
     background: #fff;
     padding: 30px 20px;
     -webkit-box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05);
@@ -1503,7 +1504,7 @@ td {
     color: #fff;
 }
 /* Pagination */
-.blog-pagination-wrap {
+/*.blog-pagination-wrap {
     padding: 0;
     margin: 30px 0 0 0;
     text-align: center;
@@ -1540,12 +1541,12 @@ td {
         margin: 0;
         text-align: center;
     }
-}
+} */
 
 
 /* ======= Post style ======= */
 /* Post Page */
-.post-page .item {
+/* .post-page .item {
     -webkit-box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05);
     box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05);
     margin-bottom: 30px;
@@ -1633,9 +1634,9 @@ blockquote span {
     font-weight: 400;
     letter-spacing: 2px;
 
-}
+} */
 /* Post Comment */
-.post h3 {
+/* .post h3 {
     font-family: 'Crimson Text', serif;
     font-size: 27px;
     font-weight: 400;
@@ -1776,9 +1777,9 @@ ol.comment-list li .children li {
     ol.comment-list li.comment .comment-body {
         padding-left: 55px;
     }
-}
+} */
 /* Form */
-.form-control {
+/* .form-control {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -1807,11 +1808,11 @@ ol.comment-list li .children li {
 }
 #message {
     background-color: transparent;
-}
+} */
 
 
 /* =======  Button Style  ======= */
-.btn {
+/* .btn {
     font-family: 'Pathway Gothic One', sans-serif;
     position: relative;
     display: inline-block;
@@ -1868,7 +1869,7 @@ ol.comment-list li .children li {
 .fl-btn {
     float: left;
     margin-top: 15px;
-}
+} */
 
 
 /* ======= Footer style ======= */
@@ -2116,3 +2117,42 @@ ol.comment-list li .children li {
 }
 
 
+  
+/* Scrolling text container */
+.scrolling-text {
+    background-color: #f1c40f; /* Background color for the scrolling text */
+    color: #3000f2 !important; /* Text color */
+    padding: 15px 0; /* Vertical padding */
+    overflow: hidden; /* Hide overflow */
+    position: relative; /* Relative positioning for absolute children */
+    border: 0px solid #d35400; /* Border around the scrolling text */
+    border-radius: 0px; /* Rounded corners */
+    text-align: center; /* Center text horizontally */
+  }
+  
+  /* Scrolling text paragraph */
+  .scrolling-text p {
+    position: absolute;
+    white-space: nowrap; /* Prevent text from wrapping */
+    transform: translateX(100%); /* Start the text off-screen */
+    animation: scrollText 20s linear infinite; /* Apply the scrolling animation */
+    width: 100%;
+    height: 100%;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    font-size: 15px; /* size of text */
+    font-family: 'Arial', sans-serif; /* Change font family */
+    font-weight: bold; /* Make text bold */
+    line-height: 10px; /* Adjust line height to center text vertically */
+  }
+  
+  /* Keyframes for scrolling animation */
+  @keyframes scrollText {
+    0% {
+      transform: translateX(100%); /* Start from right */
+    }
+    100% {
+      transform: translateX(-100%); /* Move to left */
+    }
+  }
+  
