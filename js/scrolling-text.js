@@ -7,6 +7,6 @@ function updateScrollingText(message) {
   
   // Example usage: Update text on page load
   window.addEventListener('load', () => {
-    updateScrollingText('New offer: 30% off on selected items! Limited time only!');
+    updateScrollingText('New offer: 50% off on selected items! Limited time only!');
   });
   
