@@ -1,11 +1,28 @@
 (function ($) {
     "use strict";
     // Preloader
+    // window.addEventListener("load", function () {
+    //     const loader = document.getElementById("loader");
+    //     loader.style.display = "none"; // Hide the loader
+    //     document.getElementById("main-content").style.display = "block"; // Show main content
+    // });
     window.addEventListener("load", function () {
         const loader = document.getElementById("loader");
-        loader.style.display = "none"; // Hide the loader
-        document.getElementById("main-content").style.display = "block"; // Show main content
+        const mainContent = document.getElementById("main-content");
+    
+        if (loader) {
+            loader.style.display = "none"; // Hide the loader
+        } else {
+            console.error("Loader element not found!");
+        }
+    
+        if (mainContent) {
+            mainContent.style.display = "block"; // Show main content
+        } else {
+            console.error("Main content element not found!");
+        }
     });
+    
     
      // Animations
     var contentWayPoint = function () {
