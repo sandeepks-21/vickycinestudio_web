@@ -1,11 +1,12 @@
 (function ($) {
     "use strict";
     // Preloader
-    $(window).on('load', function () {
-        setTimeout(function () {
-            $("#loader").fadeOut(200);
-        }, 200);
+    window.addEventListener("load", function () {
+        const loader = document.getElementById("loader");
+        loader.style.display = "none"; // Hide the loader
+        document.getElementById("main-content").style.display = "block"; // Show main content
     });
+    
      // Animations
     var contentWayPoint = function () {
         var i = 0;
