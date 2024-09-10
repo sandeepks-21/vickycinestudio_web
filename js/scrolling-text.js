@@ -1,12 +1,17 @@
 // scripts.js
 
-// Example: Function to update the scrolling text dynamically
+// Function to update the scrolling text dynamically
 function updateScrollingText(message) {
-    document.querySelector('.scrolling-text p').textContent = message;
+  const scrollingTextElement = document.querySelector('.scrolling-text p');
+  
+  if (scrollingTextElement) {
+      scrollingTextElement.textContent = message;
+  } else {
+      console.error('Scrolling text element not found');
   }
-  
-  // Example usage: Update text on page load
-  window.addEventListener('load', () => {
-    updateScrollingText('New offer: 50% off on selected items! Limited time only!');
-  });
-  
+}
+
+// Example usage: Update text on page load
+window.addEventListener('load', () => {
+  updateScrollingText('New offer: 60% off on selected items! Limited time only!');
+});

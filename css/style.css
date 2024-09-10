@@ -11,15 +11,12 @@
 09. Team style
 10. Portfolio (Gallery) style
 11. Testimonials style
-12. 
-13. 
-14. 
-15. 
-16. Footer style
-17. Overlay Effect Bg image
-18. Whatsapp style
-19. Video add
-20. scrolling bar
+12. Footer style
+13. Overlay Effect Bg image
+14. Whatsapp style
+15. Video add
+16. scrolling bar
+ 
 
 ================================== */
 
@@ -246,7 +243,7 @@ button {
     padding-bottom: 90px
 }
 .banner-padding {
-    padding: 150px 0;
+    padding: 90px 0;
     background-position: center center;
 }
 /* image grayscale */
@@ -436,6 +433,34 @@ button {
     }
 }
 
+/* drop-down menu style */
+.nav-item .dropdown-item {
+    padding: 5px 15px;
+    color: #ff0000; /* Change this to the desired color for dropdown items */
+    text-decoration: none;
+}
+
+/* Hover effect on dropdown items */
+.nav-item .dropdown-item:hover {
+    background-color: #f8f9fa;
+    color: #0000ff; /* Change this to the desired hover color for dropdown items */
+}
+
+/* Dropdown background */
+.nav-item .dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    padding: 10px;
+    list-style: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+/* Show the dropdown on hover */
+.nav-item:hover .dropdown-menu {
+    display: block;
+}
 
 /* ======= Header, Slider and Border Frame style ======= */
 .header {
@@ -1276,8 +1301,8 @@ button {
   
 /* Scrolling text container */
 .scrolling-text {
-    background-color: #f1c40f; /* Background color for the scrolling text */
-    color: #3000f2 !important; /* Text color */
+    background-color: #e78ad0; /* Background color for the scrolling text */
+    color: #000000 !important; /* Text color */
     padding: 15px 0; /* Vertical padding */
     overflow: hidden; /* Hide overflow */
     position: relative; /* Relative positioning for absolute children */
