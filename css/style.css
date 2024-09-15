@@ -433,28 +433,38 @@ button {
     }
 }
 
-/* drop-down menu style */
+/* Style for dropdown menu */
+.nav-item .dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #333; /* Dropdown background color */
+    padding: 10px 0;
+    list-style: none;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Adds a shadow for depth */
+    border-radius: 8px; /* Rounded corners */
+    z-index: 1000;
+    min-width: 200px; /* Set a minimum width */
+    top: 100%; /* Position just below the parent */
+    left: 0;
+}
+
+/* Style for each dropdown item */
 .nav-item .dropdown-item {
-    padding: 5px 15px;
-    color: #ff0000; /* Change this to the desired color for dropdown items */
+    padding: 10px 20px;
+    color: #fff; /* Text color */
+    font-family: inherit; /* Inherit font-family to match other nav items */
+    font-size: inherit; /* Inherit font size from parent */
     text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
+    font-size: 14px;
 }
 
 /* Hover effect on dropdown items */
 .nav-item .dropdown-item:hover {
-    background-color: #f8f9fa;
-    color: #0000ff; /* Change this to the desired hover color for dropdown items */
-}
-
-/* Dropdown background */
-.nav-item .dropdown-menu {
-    display: none;
-    position: absolute;
-    background-color: #fff;
-    padding: 10px;
-    list-style: none;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
+    background-color: #e070cb; /* Change to your desired hover color */
+    color: #000000; /* Text color on hover */
+    border-radius: 4px; /* Add slight rounding on hover */
 }
 
 /* Show the dropdown on hover */
@@ -1032,7 +1042,7 @@ button {
 
 /* ======= Footer style ======= */
 .footer-section {
-    background: linear-gradient(to top, #ff2ecb 0%, #ffffff 100%);
+    background: linear-gradient(to top, #00f335 0%, #ffffff 100%);
     padding: 120px 0;
     width: 100%;
 }
@@ -1052,6 +1062,62 @@ button {
     display: block;
     margin-bottom: 5px;
 }
+
+/* bg highlight of heading text */
+.bg-highlight {
+    background-color: rgb(12, 99, 8);
+    color: black; /* Change text color */
+    padding: 4px 8px; /* Adds padding */
+    border-radius: 4px; /* Rounded corners */
+}
+
+
+/* Styling for the map container */
+.footer-map {
+    margin-top: 20px; /* Adds space above the map */
+    background-color: #9ad8ac; /* Light grey background */
+    padding: 10px;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+/* Styling the iframe (Google Map) */
+.footer-map iframe {
+    border: none; /* Remove default border */
+    width: 100%; /* Ensure the map spans the full width */
+    height: 100px; /* Set the height of the map */
+    border-radius: 8px; /* Ensure the map has the same rounded corners */
+    transition: all 0.3s ease; /* Smooth transition on hover */
+}
+
+/* Hover effect for map */
+.footer-map iframe:hover {
+    transform: scale(1.02); /* Slightly enlarge the map on hover */
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+/* Styling for the section heading */
+.footer-map h4 {
+    font-size: 18px;
+    color: #333; /* Heading color */
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-transform: uppercase; /* Optional: Make heading text uppercase */
+    text-align: center;
+}
+
+/* Optional: Adjusting padding for mobile view */
+@media (max-width: 768px) {
+    .footer-map {
+        padding: 5px;
+        margin-top: 10px;
+    }
+    
+    .footer-map iframe {
+        height: 200px; /* Adjust the height for smaller screens */
+    }
+}
+
 
 /* Styling for the footer social icons */
 .footer-social-link {
@@ -1105,11 +1171,11 @@ button {
 
 .footer-section p {
     font-weight: 400;
-    color: #000000;
+    color: #4700fc;
     font-size: 16px;
 }
 .footer-section p small{
-    color: #00f9fd;
+    color: #000000;
     font-family: 'Pathway Gothic One', sans-serif;
     text-transform: uppercase;
     letter-spacing: 3px;
